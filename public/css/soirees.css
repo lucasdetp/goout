@@ -1,0 +1,116 @@
+.search-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 20px;
+}
+.search-form .form-group {
+    display: flex;
+    flex-direction: row;
+    margin-top: 10px;
+    justify-content: center;
+}
+.search-form button{
+    display: flex;
+    margin: auto;
+}
+.css-input-soirees {
+    font-size: 1.2rem;
+    border-width: 1px;
+    border-color: #CCCCCC;
+    background-color: #FFFFFF;
+    color: #000000;
+    border-style: solid;
+    width: 35vw;
+    height: 8vh;
+    border-radius: 8px;
+    box-shadow: 0px 0px 5px rgba(66,66,66,.75);
+}
+.css-input-soirees:focus {
+    outline:none;
+}
+
+#participant,
+#theme{
+    margin-left: 10px;
+}
+#theme{
+    margin-bottom: 20px;
+}
+.form-group select {
+    border-radius: 8px;
+}
+.container-soirees {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    position: relative;
+    top: -25vh;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -10px;
+}
+
+.card-soirees {
+    border-radius: 25px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    background: linear-gradient(360deg, rgba(217,3,104,1) 0%, rgba(255,212,0,1) 100%);
+    padding: 10px;
+    margin: 10px;
+    align-items: right;
+    color: #EADEDA;
+}
+.button-container {
+    text-align: center;
+  }
+  
+.button-soirees {
+background-color: #8D175D;
+cursor: pointer;
+border: none;
+border-radius: 8px;
+padding: 5px 15px;
+font-size: 1.1rem;
+margin-top: 10px;
+margin-right: 10px;
+color: #FFFFFF;
+font-weight: bold;
+font-family: "brevia", sans-serif;
+display: inline-block;
+}
+.col-lg-4 {
+    flex: 0 0 30%;
+    max-width: 30%;
+}
+
+.col-md-6 {
+    flex: 0 0 50%;
+    max-width: 50%;
+}
+h2 {
+    color: #820263;
+    display: flex;
+    align-items: right;
+    justify-content: right;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-family: "brevia", sans-serif;
+
+  }
+
+
+@media (max-width: 992px) {
+    .col-lg-4 {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+
+    .col-md-6 {
+        flex: 0 0 100%;
+    }
+}
