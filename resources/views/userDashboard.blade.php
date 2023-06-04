@@ -56,9 +56,9 @@
             @forelse ($soirees as $soiree)
 
             <div class="slide">
-        <div class="avatar left-image">
-            <img src="{{ $soiree->user->profile_photo_path }}" alt="avatar">
-        </div>
+                <div class="avatar left-image">
+                    <img src="{{ $soiree->user->profile_photo_path }}" alt="avatar">
+                </div>
                 <div class="right-content">
                     <h2>{{ $soiree->titre }}</h2>
                     <p>{{ $soiree->description }}</p>
