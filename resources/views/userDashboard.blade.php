@@ -53,7 +53,7 @@
 
     <div class="wrapper">
         <div class="center-slider">
-            @foreach ($soirees as $soiree)
+            @forelse ($soirees as $soiree)
 
             <div class="slide">
                 <div class="avatar left-image">

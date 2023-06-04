@@ -1,7 +1,11 @@
 <section>
     <header>
         <h2 class="text-lg font-medium text-gray-900">
+<<<<<<< HEAD
+            {{ __('Modifier mot de passe') }}
+=======
             {{ __('Modifier mon mot de passe') }}
+>>>>>>> bde3192f34102e2767ebba76775673c6f93aead2
         </h2>
 
         <p class="mt-1 text-sm text-gray-600">
@@ -32,6 +36,22 @@
         </div>
 
         <div class="flex items-center gap-4">
+<<<<<<< HEAD
+            <x-primary-button>{{ __('Save') }}</x-primary-button>
+
+            @if (session('status') === 'password-updated')
+                <p
+                    x-data="{ show: true }"
+                    x-show="show"
+                    x-transition
+                    x-init="setTimeout(() => show = false, 2000)"
+                    class="text-sm text-gray-600"
+                >{{ __('Enregistrer.') }}</p>
+            @endif
+        </div>
+    </form>
+</section>
+=======
             <x-primary-button>{{ __('Enregistrer') }}</x-primary-button>
 
             @if (session('status') === 'password-updated')
@@ -40,3 +60,4 @@
         </div>
     </form>
 </section>
+>>>>>>> bde3192f34102e2767ebba76775673c6f93aead2
