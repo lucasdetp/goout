@@ -17,14 +17,14 @@
     </head>
     <div class="container-login">
         <div class="back-login">
-            <img src="../images/nav-back.png" alt="">
+            <img src="{{ URL::asset('images/nav-back.png') }}" alt="img back">
 
         </div>
 
     </div>
     <div class="login-page">
         <div class="form">
-            <a href="/accueil"><img src="../images/logo-blanc.png" alt=""></a>
+            <a href="/accueil"><img src="{{ URL::asset('images/logo-blanc.png') }}" alt="logo"></a>
             <h1>{{ $soiree->titre }}</h1>
             <p>Date: {{ $soiree->date }}</p>
             <p>Participant: {{ $soiree->participant }}</p>

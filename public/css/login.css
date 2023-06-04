@@ -142,3 +142,35 @@ body{
   box-sizing: border-box;
   font-size: 1.2rem;
 }
+@media (max-width: 1440px){
+  .login-form a img {
+    width: 80%;
+  }
+}
+@media  (max-width: 768px) {
+  .login-page{
+    left: 28vw;
+  }
+  .back-login{
+    left: -27%;
+    top: -85vh;
+  }
+ 
+}
+@media  (max-width: 425px) {
+  .login-page{
+    left: 15vw;
+  }
+  .login-form{
+    width: 75%;
+  }
+  .login-form a img {
+    width: 50vw !important;
+  }
+}
+@media  (max-width: 425px) {
+  .login-page{
+    left: 15vw;
+    width: auto;
+  }
+}

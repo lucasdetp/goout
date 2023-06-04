@@ -1,4 +1,18 @@
 <x-app-layout>
+    @section('title', 'Go Out ! Mon profil')
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="stylesheet" type="text/css" href="{{ URL::to('css/main.css') }}">
+        <link rel="stylesheet" type="text/css" href="{{ URL::to('css/nav.css') }}">
+        <link rel="stylesheet" type="text/css" href="{{ URL::to('css/soirees.css') }}">
+        <link rel="stylesheet" type="text/css" href="{{ URL::to('css/profil.css') }}">
+        <link rel="stylesheet" href="https://use.typekit.net/ulr6efr.css">
+
+    </head>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
             {{ __('Mon profil') }}

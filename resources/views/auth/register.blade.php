@@ -12,13 +12,13 @@
     <link rel="stylesheet" href="https://use.typekit.net/lbv4ght.css">
     <link rel="stylesheet" href="nav.css">
 
-    <title>Go Out ! - Inscription</title>
+    <title>Go Out ! Inscription</title>
 </head>
 
 
 <div class="container-login">
     <div class="back-login">
-        <img src="images/nav-back.png" alt="">
+        <img src="{{ URL::asset('images/nav-back.png') }}" alt="img back">
 
     </div>
 
@@ -28,7 +28,7 @@
     <div class="form">
         <form enctype="multipart/form-data" class="login-form" method="POST" action="{{ route('register') }}">
             @csrf
-            <a href="/"><img src="images/logo-blanc.png" alt=""></a>
+            <a href="/"><img src="{{ URL::asset('images/logo-blanc.png') }}" alt="logo"></a>
             <h1>Inscription</h1>
             <div class="input">
                 <!-- Name -->
@@ -99,15 +99,13 @@
                     <x-input-error :messages="$errors->get('password_confirmation')" class="mt-2" />
                 </div>
             </div>
-
             <div class="input">
-        <div>
-            <x-input-label for="profile_photo" :value="__('Profile Photo')" />
-            <input id="profile_photo" name="profile_photo" type="file" class="mt-1 block w-full">
-            <x-input-error class="mt-2" :messages="$errors->get('profile_photo')" />
-        </div>
-    </div>
-
+                <div>
+                    <x-input-label for="profile_photo" :value="__('Profile Photo')" />
+                    <input id="profile_photo" name="profile_photo" type="file" class="mt-1 block w-full">
+                    <x-input-error class="mt-2" :messages="$errors->get('profile_photo')" />
+                </div>
+            </div>
             <div class="flex items-center justify-end mt-4">
                 <x-primary-button class="ml-4">
                     {{ __("S'inscrire") }}

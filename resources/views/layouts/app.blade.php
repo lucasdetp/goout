@@ -6,9 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="{{ URL::to('images/fav-icon1.png') }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
-
+    <!-- <title>{{ config('app.name', 'Laravel') }}</title> -->
+    <title>@yield('title', config('app.name', 'Laravel'))</title>
+    <!-- css -->
+    <link rel="stylesheet" type="text/css" href="{{ URL::to('css/footer.css') }}">
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.bunny.net">
     <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
@@ -34,10 +38,11 @@
         <!-- Page Content -->
         <main>
             {{ $slot }}
+            <footer>
+                @include('layouts.footer')
+            </footer>
         </main>
-        <footer>
-            @include('layouts.footer')
-        </footer>
+
     </div>
 </body>
 

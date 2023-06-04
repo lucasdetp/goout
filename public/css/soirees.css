@@ -1,3 +1,9 @@
+main{
+    top: -93vw !important;
+}
+.container-nav{
+    height: 112vw !important;
+}
 .search-form {
     display: flex;
     justify-content: center;
@@ -8,12 +14,13 @@
 .search-form .form-group {
     display: flex;
     flex-direction: row;
-    margin-top: 10px;
+    margin-top: 2vw;
     justify-content: center;
 }
 .search-form button{
     display: flex;
     margin: auto;
+    margin-top: 2vw;
 }
 .css-input-soirees {
     font-size: 1.2rem;
@@ -101,8 +108,114 @@ h2 {
     text-transform: uppercase;
     font-family: "brevia", sans-serif;
 
+}
+.form-group {
+    gap: 3vw;
+}
+#form-search{
+    margin-bottom: 3vw;
+}
+.form-group #title-theme {
+    color: #FFFFFF;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    font-family: "brevia", sans-serif;
+    font-weight: bold;
   }
+  .form-group #title-theme:hover{
+    color: #FFD400;
+  }
+.theme-container {
+    margin-bottom: 5vw;
+    width: 90vw;
+    padding-bottom: 50px;
+    padding-left: 30px;
+    background: linear-gradient(90deg, rgba(46,41,78,1) 0%, rgba(141,23,93,1) 100%);
+    position: relative;
+    z-index: 10;
+}
 
+.theme-card {
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.theme-card h1,
+.soirees-container h1 {
+    color: #FFFFFF;
+}
+
+.soirees-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.soiree {
+    width: 300px;
+    padding: 10px;
+    background: #EADEDA;
+    border-radius: 5px;
+    box-shadow: 3px 3px 10px #0000009C;
+}
+
+.soiree img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.button-slide {
+    display: inline-block;
+    padding: 8px 12px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.horizontal-list {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.horizontal-list li {
+    list-style: none;
+}
+
+.avatar-test {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.theme-container.right {
+    position: relative;
+    left: 10vw;
+    border-bottom-left-radius: 70px;
+    border-top-left-radius: 70px;
+}
+.theme-container.left{
+    border-bottom-right-radius: 70px;
+    border-top-right-radius: 70px;
+}
+.theme-card.right{
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 3vw;
+}
+.theme-card.left{
+    display: flex;
+    justify-content: start;
+}
+.min-h-screen.bg-gray-100{
+    height: 35vw;
+}
 
 @media (max-width: 992px) {
     .col-lg-4 {

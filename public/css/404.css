@@ -49,3 +49,49 @@ body {
 .error img{
     margin: auto;
 }
+footer{
+    display: none;
+}
+@media (max-width: 1440px){
+    .error{
+        top: -40vh;
+    }
+}
+
+@media (max-width: 1024px){
+    .error{
+        top: -25vh;
+    }
+    .error h1 {
+        font-size: 2rem;
+    }
+    .error h2 {
+        font-size: 1.5rem;
+        padding: 5px;
+        white-space: nowrap;
+    }
+}
+@media (max-width: 425px){
+   
+    .error{
+        top: -18vh;
+    }
+    .error h2{
+        white-space: normal;
+        line-height: 30px;
+    }
+    .error img {
+        width: 80vw;
+    }
+}
+@media (max-width: 375px){
+    .error{
+        top: -45vh;
+    }
+    .error img {
+        width: 80vw;
+    }
+    .error h2{
+        line-height: 40px;
+    }
+}

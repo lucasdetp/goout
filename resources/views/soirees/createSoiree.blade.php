@@ -17,7 +17,7 @@
     </head>
     <div class="container-login">
         <div class="back-login">
-            <img src="../images/nav-back.png" alt="">
+            <img src="{{ URL::asset('images/nav-back.png') }}" alt="img back">
         </div>
     </div>
 
@@ -26,7 +26,7 @@
             <form class="login-form" method="POST" action="{{ route('soirees.store') }}">
                 {{ csrf_field() }}
                 <input type="hidden" name="user_id" value="{{ auth()->id() }}">
-                <a href="/accueil"><img src="../images/logo-blanc.png" alt=""></a>
+                <a href="/accueil"><img id="logo-go-out" src="{{ URL::asset('images/logo-blanc.png') }}" alt="logo"></a>
                 <h1>Créer une soirée</h1>
                 <div class="form-group{{ $errors->has('titre') ? ' has-error' : '' }}">
                     <input id="titre" type="text" class="block mt-1 w-full form-control" name="titre" value="{{ old('titre') }}" placeholder="{{ __('Titre') }}" required autofocus>

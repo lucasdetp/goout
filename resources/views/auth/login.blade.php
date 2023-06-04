@@ -12,13 +12,13 @@
     <link rel="stylesheet" href="https://use.typekit.net/lbv4ght.css">
     <link rel="stylesheet" href="nav.css">
 
-    <title>Go Out ! - Connection</title>
+    <title>Go Out ! Connection</title>
 </head>
 
 
 <div class="container-login">
     <div class="back-login">
-        <img src="images/nav-back.png" alt="">
+        <img src="{{ URL::asset('images/nav-back.png') }}" alt="">
 
     </div>
 
@@ -29,7 +29,7 @@
         <form class="login-form" method="POST" action="{{ route('login') }}">
             @csrf
 
-            <a href="/accueil"><img src="images/logo-blanc.png" alt=""></a>
+            <a href="/accueil"><img src="{{ URL::asset('images/logo-blanc.png') }}" alt="logo"></a>
             <h1>S'identifier</h1>
             <!-- <x-input-label for="email" :value="__('Email')" /> -->
             <x-text-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required autofocus autocomplete="username" placeholder="{{ __('Email') }}" />
