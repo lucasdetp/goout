@@ -36,7 +36,7 @@
 
             </form>
             <div class="form-group">
-                <label id="color" for="theme">Thème :</label>
+                <label id="color" class="theme-color" for="theme">Thème :</label>
                 @foreach($themes as $theme)
                 <a href="#{{ $theme->titre }}">
                     <h1 id="title-theme">{{ $theme->titre }}</h1>
@@ -104,4 +104,5 @@
     <script src="https://code.jquery.com/jquery-migrate-3.4.1.js"></script>
     <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script src="/javascript/carrousel-soirees.js"></script>
+    <script src="/javascript/carrousel.js"></script>
 </x-app-layout>

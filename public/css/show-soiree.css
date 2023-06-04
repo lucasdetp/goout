@@ -14,3 +14,19 @@ h1 {
     font-family: "ff-cocon-pro", sans-serif;
     text-transform: uppercase;
   }
+
+  
+.partenaires {
+    bottom: 36vw;
+}
+.container-login{
+height: 130vw;
+}
+main {
+    top: -28vw;
+}
+@media (max-width: 425px){
+.login-page {
+    left: 9vw !important;
+ }
+}

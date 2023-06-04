@@ -38,7 +38,7 @@
         <!-- Page Content -->
         <main>
             {{ $slot }}
-            <footer>
+            <footer id="foot">
                 @include('layouts.footer')
             </footer>
         </main>

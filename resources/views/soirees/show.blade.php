@@ -1,3 +1,6 @@
+<x-app-layout>
+    @section('title', 'Go Out ! Détails de la soirée')
+
     <head>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,24 +10,22 @@
         <!-- Add the slick-theme.css if you want default styling -->
         <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
 
+        <link rel="stylesheet" type="text/css" href="{{ URL::to('css/main.css') }}">
+        <link rel="stylesheet" type="text/css" href="{{ URL::to('css/nav.css') }}">
         <link rel="stylesheet" type="text/css" href="{{ URL::to('css/login.css') }}">
         <link rel="stylesheet" type="text/css" href="{{ URL::to('css/show-soiree.css') }}">
         <link rel="stylesheet" href="https://use.typekit.net/ulr6efr.css">
         <link rel="stylesheet" href="https://use.typekit.net/lbv4ght.css">
-        <link rel="stylesheet" href="nav.css">
 
-        <title>Go Out ! Détails de la soirée</title>
     </head>
     <div class="container-login">
         <div class="back-login">
             <img src="{{ URL::asset('images/nav-back.png') }}" alt="img back">
-
         </div>
-
     </div>
     <div class="login-page">
         <div class="form">
-            <a href="/accueil"><img src="{{ URL::asset('images/logo-blanc.png') }}" alt="logo"></a>
+            <!-- <a href="/accueil"><img src="{{ URL::asset('images/logo-blanc.png') }}" alt="logo"></a> -->
             <h1>{{ $soiree->titre }}</h1>
             <p>Date: {{ $soiree->date }}</p>
             <p>Participant: {{ $soiree->participant }}</p>
@@ -59,3 +60,8 @@
 
         </div>
     </div>
+    <script src="https://code.jquery.com/jquery-3.6.4.js"></script>
+    <script src="https://code.jquery.com/jquery-migrate-3.4.1.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="/javascript/carrousel.js"></script>
+</x-app-layout>

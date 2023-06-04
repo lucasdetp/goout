@@ -28,8 +28,16 @@
 }
 #date{
     color: #757575;
-<<<<<<< HEAD
 }
-=======
+main {
+    top: -40vw;
 }
->>>>>>> bde3192f34102e2767ebba76775673c6f93aead2
+.container-login{
+    height: 76vw !important;
+}
+.login-form{
+    width: 35vw;
+}
+footer{
+    max-height: 8vw;
+}

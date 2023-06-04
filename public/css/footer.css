@@ -167,7 +167,7 @@ footer{
         top: -150vw !important;
     }
     .partenaires {
-        bottom: 140vw;
+        bottom: 140vw !important;
             
     }
     #footer{

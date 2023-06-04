@@ -227,3 +227,32 @@ h2 {
         flex: 0 0 100%;
     }
 }
+@media  (max-width: 1024px) {
+    .form-group #title-theme {
+        font-size: 1.3rem;
+    }
+    .theme-color{
+        margin-top: 0 !important;
+    }
+    
+}
+@media (max-width: 425px){
+    #navbar-mobile {
+        top: -315vw;
+    }    
+    .search-form .form-group {
+        flex-direction: column;
+    }
+    .css-input-soirees {
+        width: auto;
+    }
+    main {
+        top: -308vw !important;
+    }
+    .container-nav{
+        height: 313vw !important;
+    }
+    .theme-card h1 {
+        font-size: 1.5rem;
+    }
+}

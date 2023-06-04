@@ -1,3 +1,6 @@
+<x-app-layout>
+    @section('title', 'Go Out ! Crée ta soirées')
+
     <head>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,13 +10,14 @@
         <!-- Add the slick-theme.css if you want default styling -->
         <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
 
+        <link rel="stylesheet" type="text/css" href="{{ URL::to('css/main.css') }}">
+        <link rel="stylesheet" type="text/css" href="{{ URL::to('css/nav.css') }}">
         <link rel="stylesheet" type="text/css" href="{{ URL::to('css/login.css') }}">
         <link rel="stylesheet" type="text/css" href="{{ URL::to('css/create-soiree.css') }}">
         <link rel="stylesheet" href="https://use.typekit.net/ulr6efr.css">
         <link rel="stylesheet" href="https://use.typekit.net/lbv4ght.css">
-        <link rel="stylesheet" href="nav.css">
 
-        <title>Go Out ! Crée ta soirée</title>
+
     </head>
     <div class="container-login">
         <div class="back-login">
@@ -26,7 +30,7 @@
             <form class="login-form" method="POST" action="{{ route('soirees.store') }}">
                 {{ csrf_field() }}
                 <input type="hidden" name="user_id" value="{{ auth()->id() }}">
-                <a href="/accueil"><img id="logo-go-out" src="{{ URL::asset('images/logo-blanc.png') }}" alt="logo"></a>
+                <!-- <a href="/accueil"><img id="logo-go-out" src="{{ URL::asset('images/logo-blanc.png') }}" alt="logo"></a> -->
                 <h1>Créer une soirée</h1>
                 <div class="form-group{{ $errors->has('titre') ? ' has-error' : '' }}">
                     <input id="titre" type="text" class="block mt-1 w-full form-control" name="titre" value="{{ old('titre') }}" placeholder="{{ __('Titre') }}" required autofocus>
@@ -93,3 +97,4 @@
             </form>
         </div>
     </div>
+</x-app-layout>

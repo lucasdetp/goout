@@ -27,7 +27,7 @@ $(window).on('load', function() {
       if (soireesCount > 3) {
         slickConfig.slidesToShow = 3;
         slickConfig.slidesToScroll = 3;
-        slickConfig.dots = true;
+        slickConfig.dots = false;
         slickConfig.swipe = true;
       } else if (soireesCount > 1) {
         slickConfig.slidesToShow = 2;
