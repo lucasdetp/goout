@@ -57,7 +57,7 @@
 
             <div class="slide">
                 <div class="avatar left-image">
-                    <img src="{{ URL::asset('images/1.png') }}" alt="avatar">
+                    <img src="{{ $soiree->user->profile_photo_path }}" alt="avatar">
                 </div>
                 <div class="right-content">
                     <h2>{{ $soiree->titre }}</h2>

@@ -26,7 +26,7 @@
 
 <div class="login-page">
     <div class="form">
-        <form class="login-form" method="POST" action="{{ route('register') }}">
+        <form enctype="multipart/form-data" class="login-form" method="POST" action="{{ route('register') }}">
             @csrf
             <a href="/"><img src="{{ URL::asset('images/logo-blanc.png') }}" alt="logo"></a>
             <h1>Inscription</h1>

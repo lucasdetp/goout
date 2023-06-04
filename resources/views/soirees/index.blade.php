@@ -6,6 +6,11 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+        <!-- Add the slick-theme.css if you want default styling -->
+        <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+        <!-- Add the slick-theme.css if you want default styling -->
+        <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
+
         <link rel="stylesheet" type="text/css" href="{{ URL::to('css/main.css') }}">
         <link rel="stylesheet" type="text/css" href="{{ URL::to('css/nav.css') }}">
         <link rel="stylesheet" type="text/css" href="{{ URL::to('css/soirees.css') }}">
@@ -43,43 +48,49 @@
     </div>
 
 
-    @foreach($themes as $key => $theme)
+    @foreach ($themes as $key => $theme)
     @php
     $positionClass = ($key % 2 == 0) ? 'left' : 'right';
     $themeCardClass = "theme-card " . $positionClass;
     @endphp
 
-    <div class="theme-container {{ $positionClass }}" id="{{ $theme->titre }}">
+    <div class="theme-container {{ $positionClass }} wrapper" id="{{ $theme->titre }}">
         <div class="{{ $themeCardClass }}">
             <h1>{{ $theme->titre }}</h1>
         </div>
 
-        <div class="soirees-container">
+        <div class="soirees-container center-slider">
             @php
             $soireesByTheme = $soirees->where('theme_id', $theme->id);
             @endphp
 
             @if ($soireesByTheme->count() > 0)
             @foreach ($soireesByTheme as $soiree)
-            <div class="soiree">
-                <img src="{{ $soiree->user->profile_photo_path }}" alt="">
-                <p>{{ $soiree->titre }}</p>
-                <p>{{ $soiree->description }}</p>
-                <p>Nombres de participants: {{ $soiree->participant }}</p>
-                <p>Thème: {{ $soiree->theme->titre }}</p>
-                <a class="button-slide" href="{{ route('soirees.show', $soiree->id) }}">Rejoindre</a>
-                <ul>
-                    @if ($soiree->participations && $soiree->participations->count() > 0)
-                    <ul class="horizontal-list">
-                        @foreach ($soiree->participations as $participation)
-                        <li><img class="avatar-test" src="{{ $participation->user->profile_photo_path }}" alt=""></li>
-                        @endforeach
+            <div class="soiree slide">
+                <div class="avatar left-image">
+                    <img src="{{ $soiree->user->profile_photo_path }}" alt="">
+                </div>
+                <div class="right-content">
+                    <h2>{{ $soiree->titre }}</h2>
+                    <p>{{ $soiree->description }}</p>
+                    <p>Nombres de participants: {{ $soiree->participant }}</p>
+                    <p>Thème: {{ $soiree->theme->titre }}</p>
+                    <a class="button-slide" href="{{ route('soirees.show', $soiree->id) }}">Rejoindre</a>
+                    <ul>
+                        @if ($soiree->participations && $soiree->participations->count() > 0)
+                        <ul class="horizontal-list">
+                            @foreach ($soiree->participations as $participation)
+                            <li><img class="avatar-test" src="{{ $participation->user->profile_photo_path }}" alt=""></li>
+                            @endforeach
+                        </ul>
+                        @else
+                        <p>Aucun participant pour le moment.</p>
+                        @endif
                     </ul>
-                    @else
-                    <p>Aucun participant pour le moment.</p>
-                    @endif
-                </ul>
-                <p>Le {{ $soiree->date }} à {{ $soiree->ville }}</p>
+                    <div class="date">
+                        <p>Le {{ $soiree->date }} à {{ $soiree->ville }}</p>
+                    </div>
+                </div>
             </div>
             @endforeach
             @else
@@ -88,4 +99,9 @@
         </div>
     </div>
     @endforeach
+
+    <script src="https://code.jquery.com/jquery-3.6.4.js"></script>
+    <script src="https://code.jquery.com/jquery-migrate-3.4.1.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="/javascript/carrousel-soirees.js"></script>
 </x-app-layout>

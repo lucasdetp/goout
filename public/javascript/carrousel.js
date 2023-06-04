@@ -1,4 +1,4 @@
-// Slider soirées
+// Slider soirées home
 $(window).on('load', function() {
   // console.log('testes')
   $('.center-slider').slick({
