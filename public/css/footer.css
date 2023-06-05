@@ -1,5 +1,6 @@
 footer{
     max-height: 20vw;
+    
 }
 .container-footer {
     position: relative;
@@ -169,8 +170,10 @@ footer{
         top: -150vw !important;
     }
     .partenaires {
-        bottom: 140vw !important;
-            
+        bottom: 152vw !important;
+    }
+    .partenaires h1{
+        bottom: 0;
     }
     #footer{
         bottom: 70vw;

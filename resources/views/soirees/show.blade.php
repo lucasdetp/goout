@@ -18,11 +18,11 @@
         <link rel="stylesheet" href="https://use.typekit.net/lbv4ght.css">
 
     </head>
-    <div class="container-login">
+    <!-- <div class="container-login">
         <div class="back-login">
             <img src="{{ URL::asset('images/nav-back.png') }}" alt="img back">
         </div>
-    </div>
+    </div> -->
     <div class="login-page">
         <div class="form">
             <!-- <a href="/accueil"><img src="{{ URL::asset('images/logo-blanc.png') }}" alt="logo"></a> -->

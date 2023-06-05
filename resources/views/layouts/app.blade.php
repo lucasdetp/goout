@@ -19,7 +19,7 @@
 
     <!-- Scripts -->
     @vite(['resources/css/app.css', 'resources/js/app.js'])
-    <script src="javascript/nav.js"></script>
+    <script src="{{ URL::asset('javascript/nav.js') }}"></script>
 </head>
 
 <body class="font-sans antialiased">
@@ -38,11 +38,11 @@
         <!-- Page Content -->
         <main>
             {{ $slot }}
-
+            <footer id="foot">
+                @include('layouts.footer')
+            </footer>
         </main>
-        <footer id="foot">
-            @include('layouts.footer')
-        </footer>
+
     </div>
 </body>
 

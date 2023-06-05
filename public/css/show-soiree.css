@@ -27,6 +27,14 @@ main {
 }
 @media (max-width: 425px){
 .login-page {
-    left: 9vw !important;
+    left: 0 !important;
+    top: -145vw;
+    width: 100%;
  }
+ .container-nav {
+    height: 303vw;
+}
+#navbar-mobile {
+    top: -302vw;
+}
 }
