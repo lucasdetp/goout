@@ -38,11 +38,11 @@
         <!-- Page Content -->
         <main>
             {{ $slot }}
-            <footer id="foot">
-                @include('layouts.footer')
-            </footer>
-        </main>
 
+        </main>
+        <footer id="foot">
+            @include('layouts.footer')
+        </footer>
     </div>
 </body>
 

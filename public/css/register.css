@@ -17,7 +17,9 @@ body{
     left: -20%;
     top: -60vh;
   }
-  
+  .flex {
+    display: block !important;
+  }
   
   .login-page {
     width: 360px;

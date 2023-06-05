@@ -99,9 +99,9 @@
                     <x-input-error :messages="$errors->get('password_confirmation')" class="mt-2" />
                 </div>
             </div>
-            <div class="input">
-                <div>
-                    <x-input-label for="profile_photo" :value="__('Profile Photo')" />
+            <div class="input flex">
+                <div class="mt-6">
+                    <h1><x-input-label for="profile_photo" :value="__('Ajouter une photo de profil')" /></h1>
                     <input id="profile_photo" name="profile_photo" type="file" class="mt-1 block w-full">
                     <x-input-error class="mt-2" :messages="$errors->get('profile_photo')" />
                 </div>
