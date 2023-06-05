@@ -5,11 +5,11 @@
 </div>
 <div id="footer">
     <ul class="footer-menu">
-        <li><a href="#plan-du-site">Plan du site</a></li>
-        <li><a href="#cookie">Cookies</a></li>
+        <li><a href="/plan-site">Plan du site</a></li>
+        <li><a href="/cookies">Cookies</a></li>
         <li><a href="/"><img src="{{ URL::asset('images/logo-blanc.png') }}" alt="logo" class="logo"></a></li>
-        <li><a href="#mentions-legales">Mentions légales</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="/mentions-legales">Mentions légales</a></li>
+        <li><a href="/contact">Contact</a></li>
     </ul>
 </div>
 <div class="partenaires">

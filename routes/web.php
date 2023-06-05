@@ -53,3 +53,21 @@ Route::get('/soirees/{soiree}', [SoireeController::class, 'show'])->name('soiree
 Route::fallback(function () {
     return view('404');
 });
+Route::get('/bon-plan', function () {
+    return view('pages.bon-plan');
+})->name('bon-plan');
+Route::get('/contact', function () {
+    return view('pages.contact');
+})->name('contact');
+Route::get('/cookies', function () {
+    return view('pages.cookies');
+})->name('cookies');
+Route::get('/mentions-legales', function () {
+    return view('pages.mentions-legales');
+})->name('bon-plan');
+Route::get('/plan-site', function () {
+    return view('pages.plan-site');
+})->name('plan-site');
+Route::get('/a-propos', function () {
+    return view('pages.a-propos');
+})->name('a-propos');
