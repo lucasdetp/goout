@@ -14,7 +14,16 @@ h1 {
     font-family: "ff-cocon-pro", sans-serif;
     text-transform: uppercase;
   }
-
+  .login-page {
+    width: 360px;
+    margin: auto;
+    position: absolute;
+    left: 40vw;
+    top: -70%;
+   
+    justify-content: center;
+    display: flex;
+  }
   
 .partenaires {
     bottom: 36vw;

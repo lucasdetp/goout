@@ -1,0 +1,113 @@
+main{
+    top: 8vw !important;   
+    position: relative;
+   }
+.container-nav{
+    display: none;
+}
+#navbar.transparent{
+    background: linear-gradient(90deg, rgba(65, 37, 81, 1) 0%, rgba(119, 28, 90, 1) 100%) !important;
+}
+.bg-gray-100{
+    background-color: transparent;
+}
+   
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+  }
+  
+  
+  .container{
+    background-color: #F0F0F0;
+    width:42vw;
+    margin: 20px auto;
+  }
+  
+  .title{
+    padding:20px 20px 30px 20px;
+    background: linear-gradient(90deg, rgba(65, 37, 81, 1) 0%, rgba(119, 28, 90, 1) 100%) !important;
+    color:white;
+    letter-spacing: 2px;
+    color: #FFFFFF;
+    text-decoration: none;
+    font-family: "brevia", sans-serif;
+    font-size: 1.7rem;
+    font-weight: bold;
+  }  
+  
+  form{
+    display:grid;
+    grid-template-columns:1fr;
+    grid-template-rows:auto;
+    grid-gap:10px;
+    padding: 20px
+  }
+  .form-field{
+    display:flex;
+    flex-direction:column;
+  }
+  
+  input[type="text"],input[type="email"]{
+    height: 2.4em;
+    font-size:1em;
+    padding-left: 5px;
+    outline:none;
+    border: none;
+    border-radius: 5px;
+  }
+  input[type="text"]:focus,input[type="email"]:focus{
+    border: 2px solid rgba(98, 147, 173,0.5);
+  }
+  label{
+    font-size:1.2em;
+    margin-bottom: 5px;
+  }
+  textarea{
+    resize:none;
+    font-size:1em;
+    padding: 6px 5px;
+    outline:none;
+    border: none;
+    border-radius: 5px;
+  }
+  textarea:focus{
+    border: 2px solid rgba(98, 147, 173,0.5);
+  }
+  .btn{
+    display:flex;
+    align-items:flex-end;
+  }
+  input[type="submit"]{
+    padding:6px 15px;
+    outline:none;
+    border: none;
+    border-radius: 5px;
+    margin-top:10px;
+    background: linear-gradient(90deg, rgba(65, 37, 81, 1) 0%, rgba(119, 28, 90, 1) 100%) !important;
+    color:white;
+    font-family: "brevia", sans-serif;
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+  
+  #status-message {
+    text-align: center;
+    color: green;
+    font-family: "brevia", sans-serif;
+    font-size: 1.1rem;
+    font-weight: bold;
+  }
+
+  @media (max-width:415px){
+    .container{
+    background-color: #F0F0F0;
+    width:100%;
+    margin: 20px auto;
+  }
+  }
+  
+  
+  

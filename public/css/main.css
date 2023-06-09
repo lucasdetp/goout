@@ -384,6 +384,9 @@ body{
     font-size: 1.2rem;
     font-family: "brevia", sans-serif;
   }
+  #desc-soirees{
+    margin-bottom: 10px;
+}
   .slide .right-content .button-slide {
     background-color:  #8D175D;
     cursor: pointer;
@@ -642,6 +645,9 @@ margin-bottom: 80px;
     font-weight: bold;
     font-family: "brevia", sans-serif;
   }
+  .btn-premium button:hover {
+    background: linear-gradient(90deg, rgba(255,212,0,1) 0%, rgba(217,3,104,1) 100%);
+}
   /* les meilleurs soirée pret de chez toi */
   .container-4 {
     display: flex;
@@ -681,6 +687,9 @@ margin-bottom: 80px;
     font-weight: bold;
     text-shadow: 3px 3px 6px #2E294EBA;
   }
+  .card-body .button:hover {
+    background: linear-gradient(90deg, rgba(255,212,0,1) 0%, rgba(217,3,104,1) 100%);
+}
   .card-body span {
     white-space: nowrap;
     font-size: 3.5rem;

@@ -72,21 +72,34 @@
                 </div>
                 <div class="right-content">
                     <h2>{{ $soiree->titre }}</h2>
-                    <p>{{ $soiree->description }}</p>
+                    @if (strlen($soiree->description) > 100)
+                    <p id="desc-soirees">{{ substr($soiree->description, 0, 100) . '...' }}</p>
+                    @else
+                    <p id="desc-soirees">{{ $soiree->description }}</p>
+                    @endif
                     <p>Nombres de participants: {{ $soiree->participant }}</p>
                     <p>Thème: {{ $soiree->theme->titre }}</p>
                     <a class="button-slide" href="{{ route('soirees.show', $soiree->id) }}">Rejoindre</a>
                     <ul>
                         @if ($soiree->participations && $soiree->participations->count() > 0)
                         <ul class="horizontal-list">
-                            @foreach ($soiree->participations as $participation)
+                            @php
+                            $participantCount = $soiree->participations->count();
+                            $maxAvatars = 3;
+                            $displayCount = min($participantCount, $maxAvatars);
+                            @endphp
+                            @foreach ($soiree->participations->take($displayCount) as $participation)
                             <li><img class="avatar-test" src="{{ $participation->user->profile_photo_path }}" alt=""></li>
                             @endforeach
+                            @if ($participantCount > $maxAvatars)
+                            <li><span class="avatar-test">...</span></li>
+                            @endif
                         </ul>
                         @else
                         <p>Aucun participant pour le moment.</p>
                         @endif
                     </ul>
+
                     <div class="date">
                         <p>Le {{ $soiree->date }} à {{ $soiree->ville }}</p>
                     </div>

@@ -61,7 +61,11 @@
                 </div>
                 <div class="right-content">
                     <h2>{{ $soiree->titre }}</h2>
-                    <p>{{ $soiree->description }}</p>
+                    @if (strlen($soiree->description) > 100)
+                    <p id="desc-soirees">{{ substr($soiree->description, 0, 100) . '...' }}</p>
+                    @else
+                    <p id="desc-soirees">{{ $soiree->description }}</p>
+                    @endif
 
                     <p>Nombres de participants: {{ $soiree->participant }}</p>
 
