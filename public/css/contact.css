@@ -1,3 +1,6 @@
+html{
+  scroll-behavior: smooth;
+  }
 main{
     top: 8vw !important;   
     position: relative;
@@ -13,101 +16,132 @@ main{
 }
    
 
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-  }
-  
-  
-  .container{
-    background-color: #F0F0F0;
-    width:42vw;
-    margin: 20px auto;
-  }
-  
-  .title{
-    padding:20px 20px 30px 20px;
-    background: linear-gradient(90deg, rgba(65, 37, 81, 1) 0%, rgba(119, 28, 90, 1) 100%) !important;
-    color:white;
-    letter-spacing: 2px;
-    color: #FFFFFF;
-    text-decoration: none;
-    font-family: "brevia", sans-serif;
-    font-size: 1.7rem;
-    font-weight: bold;
-  }  
-  
-  form{
-    display:grid;
-    grid-template-columns:1fr;
-    grid-template-rows:auto;
-    grid-gap:10px;
-    padding: 20px
-  }
-  .form-field{
-    display:flex;
-    flex-direction:column;
-  }
-  
-  input[type="text"],input[type="email"]{
-    height: 2.4em;
-    font-size:1em;
-    padding-left: 5px;
-    outline:none;
-    border: none;
-    border-radius: 5px;
-  }
-  input[type="text"]:focus,input[type="email"]:focus{
-    border: 2px solid rgba(98, 147, 173,0.5);
-  }
-  label{
-    font-size:1.2em;
-    margin-bottom: 5px;
-  }
-  textarea{
-    resize:none;
-    font-size:1em;
-    padding: 6px 5px;
-    outline:none;
-    border: none;
-    border-radius: 5px;
-  }
-  textarea:focus{
-    border: 2px solid rgba(98, 147, 173,0.5);
-  }
-  .btn{
-    display:flex;
-    align-items:flex-end;
-  }
-  input[type="submit"]{
-    padding:6px 15px;
-    outline:none;
-    border: none;
-    border-radius: 5px;
-    margin-top:10px;
-    background: linear-gradient(90deg, rgba(65, 37, 81, 1) 0%, rgba(119, 28, 90, 1) 100%) !important;
-    color:white;
-    font-family: "brevia", sans-serif;
-    font-size: 1.2rem;
-    font-weight: bold;
-  }
-  
-  #status-message {
-    text-align: center;
-    color: green;
-    font-family: "brevia", sans-serif;
-    font-size: 1.1rem;
-    font-weight: bold;
-  }
 
-  @media (max-width:415px){
-    .container{
-    background-color: #F0F0F0;
-    width:100%;
+  .container-faq {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.desc-faq {
+    margin-bottom: 20px;
+}
+
+a[href="#faq"] {
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+}
+
+  .card {
+    width: 80vw;
+    background: linear-gradient(to bottom right, #FF6B6B, #FF5252);
+    border-radius: 10px;
+    padding: 20px;
+    color: #FFF;
+    cursor: pointer;
     margin: 20px auto;
-  }
-  }
-  
-  
-  
+    text-align: center;
+    transition: background-color 0.3s;
+}
+
+.card:hover {
+    background-color: #FF4040;
+}
+
+.card .description {
+  opacity: 0;
+  height: 0;
+  overflow: hidden;
+  transition: opacity 0.3s, height 0.3s;
+}
+
+.card.clicked .description {
+  opacity: 1;
+  height: auto;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+  background-color: #00f7ff;
+  padding: 50px;
+}
+
+h1 {
+  margin-top: 0;
+}
+
+form {
+  width: 100%;
+}
+
+.form-field {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-field label {
+  margin-bottom: 5px;
+  display: block;
+  text-align: left;
+}
+
+.form-field input,
+.form-field textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.form-field .row {
+  display: flex;
+  gap: 5vw;
+}
+.e{
+  width: 20vw;
+}
+
+.form-field .row > div.name {
+  width: 60%;
+}
+
+.form-field .email {
+  width: 60%;
+}
+
+
+.form-field .email,
+.form-field .Sujet {
+  width: 48%;
+  margin-right: auto;
+}
+
+.form-field .message {
+  width: auto;
+}
+
+.form-field .btn {
+  text-align: center;
+}
+
+.submit {
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#status-message {
+  text-align: center;
+  margin-top: 10px;
+}
