@@ -5,10 +5,7 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <!-- Add the slick-theme.css if you want default styling -->
-        <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
-        <!-- Add the slick-theme.css if you want default styling -->
-        <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
+
         <link rel="stylesheet" type="text/css" href="{{ URL::to('css/userSoirees.css') }}">
         <link rel="stylesheet" type="text/css" href="{{ URL::to('css/main.css') }}">
         <link rel="stylesheet" type="text/css" href="{{ URL::to('css/nav.css') }}">
@@ -102,8 +99,5 @@
     </div>
 
 
-    <script src="https://code.jquery.com/jquery-3.6.4.js"></script>
-    <script src="https://code.jquery.com/jquery-migrate-3.4.1.js"></script>
-    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-    <script src="/javascript/carrousel.js"></script>
+
 </x-app-layout>

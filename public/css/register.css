@@ -123,4 +123,67 @@ body{
   #birthday{
     color: #757575;
     width: 268px;
+    
+}
+@media  (max-width: 1024px) {
+  .container-login{
+    height: 115vh;
+  }
+}
+@media  (max-width: 768px) {
+  /* retire icon calendrier */
+  input[type="date"]::-webkit-calendar-picker-indicator {
+    display: none;
+  }
+  .login-page{
+    left: 27vw;
+  }
+  .back-login{
+    left: -28%;
+  }
+}
+@media  (max-width: 425px) {
+  .login-page{
+    left: 7vw;
+    top: 2%;
+  }
+  .form{
+    padding: 10px;
+  }
+  .login-page .form a img {
+    width: 40vw;
+  }
+  #birthday{
+    width: 175px;
+  }
+  .back-login{
+    left: -45%;
+  }
+}
+@media  (max-width: 375px) {
+  .login-page{
+    left: 3vw;
+  }
+  .back-login{
+    left: -50%;
+  }
+}
+@media  (max-width: 375px) {
+  .login-page{
+    left: 8vw;
+  }
+  .container-login{
+    width: 112%;
+  }
+  .back-login{
+    left: -55%;
+  }
+}
+@media (max-width: 320px){
+  .login-page{
+    left: -1vw;
+  }
+  #birthday{
+    height: 57px;
+  }
 }

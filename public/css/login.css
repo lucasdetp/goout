@@ -149,7 +149,7 @@ body{
 }
 @media  (max-width: 768px) {
   .login-page {
-    top: -115vw;
+    /* top: -115vw; */
     left: 28vw;
 }
   .back-login{
