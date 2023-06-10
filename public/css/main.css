@@ -504,6 +504,7 @@ margin-bottom: 80px;
 
 .right-content {
     overflow: hidden; 
+    padding: 10px;
 }
 .right-content p {
     color: #EADEDA;
