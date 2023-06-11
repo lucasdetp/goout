@@ -3,10 +3,10 @@ html{
   }
 main{
     position: relative;
-    top: 8vw !important;   
+    top: -48vw !important;   
    }
    .container-nav{
-       display: none;
+       height: 140vh !important;
    }
    #navbar.transparent{
        background: linear-gradient(90deg, rgba(65, 37, 81, 1) 0%, rgba(119, 28, 90, 1) 100%) !important;
@@ -23,13 +23,14 @@ main{
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    gap: 8vw;
   }
   
   .a-propos p {
     text-align: center;
     width: 80vw;
     margin: auto;
-    color: #000000;
+    color: #FFFFFF;
     text-decoration: none;
     font-family: "brevia", sans-serif;
     font-size: 1.5rem;
@@ -43,16 +44,37 @@ main{
   .nav-propos {
     display: flex;
     gap: 1vw;
+    margin-bottom: 20vw;
   }
+  
   .nav-propos a {
-    color: #000000;
+    position: relative;
+    padding: 10px 15px;
+    margin: 5px;
+    display: inline-block;
     text-decoration: none;
     font-family: "brevia", sans-serif;
-    font-size: 1.3rem;
+    font-size: 1.5rem;
     font-weight: bold;
-    padding: 10px;
-    border-radius: 28px;
-    border : 5px solid black;
+    background-image: linear-gradient(to right, #D90368, #FFD400);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  
+  .nav-propos a::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 50px;
+    padding: 5px;
+    background: linear-gradient(45deg, #d90368, #FFD400);
+    -webkit-mask: 
+      linear-gradient(#fff 0 0) content-box, 
+      linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+            mask-composite: exclude;
+    pointer-events: none;
   }
   .left {
     float: left;
@@ -69,34 +91,43 @@ main{
   }
   .desc-propos p {
     color: black;
-    font-size: 1.2rem;
-    font-family: "brevia", sans-serif;
-    font-weight: bold;
+    font-size: 1.5rem;
+    font-family: "ff-cocon-pro", sans-serif;
+    font-weight: lighter;
   }
   .desc-propos span {
     color: #D90368;
   }
   .left .title h1{
-    color: #FFD400;
-    text-shadow: 2px 4px 2px #d90368;
-    text-transform: normal;
-    display: flex;
-    align-items: center;
-    justify-content: left;
-    font-size: 3.5rem;
+    position: relative;
+    padding: 10px 15px;
+    margin: 5px;
+    display: inline-block;
+    text-decoration: none;
     font-family: "brevia", sans-serif;
+    font-size: 3.5rem;
     font-weight: bold;
+    background-image: linear-gradient(to right, #D90368, #FFD400);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
 }
 .right .title h1{
-    color: #FFD400;
-    text-shadow: 2px 4px 2px #d90368;
-    text-transform: normal;
-    display: flex;
-    align-items: center;
-    justify-content: right;
-    font-size: 3.5rem;
-    font-family: "brevia", sans-serif;
-    font-weight: bold;
+  position: relative;
+  padding: 10px 15px;
+  margin: 5px;
+  display: inline-block;
+  text-decoration: none;
+  font-family: "brevia", sans-serif;
+  font-size: 3.5rem;
+  font-weight: bold;
+  background-image: linear-gradient(to right, #D90368, #FFD400);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.title img {
+  width: 150px;
 }
 .objectifs,
 .valeurs,
@@ -113,4 +144,65 @@ main{
 .right-desc{
   position: relative;
   right: 5vw;
+}
+@media  (max-width: 1024px) {
+  main{
+    top: -82vw !important;
+  }
+  .nav-propos {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+@media  (max-width: 768px) {
+  #navbar-mobile{
+    top: -153vw !important;
+  }
+  main{
+    top: -109vw !important;
+  }
+  .container-head-propos {
+    position: relative;
+    top: -35vw;
+  }
+  .all-propos{
+    position: relative;
+    top: -40vw;
+  }
+ 
+}
+@media  (max-width: 425px) {
+  .left .title h1, .right .title h1 {
+    font-size: 1.5rem;
+  }
+   .right .title {
+    display: flex;
+    align-content: center;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: flex-end;
+  }
+  #navbar-mobile{
+    top: -345vw !important;
+  }
+  .container-nav {
+    height: 180vh !important;
+  }
+  main{
+    top: -191vw !important;
+  }
+  .container-head-propos {
+    top: -145vw;
+  }
+  .all-propos{
+    top: -105vw;
+  }
+}
+@media  (max-width: 375px) {
+  #navbar-mobile{
+    top: -405vw !important;
+  }
+  main{
+    top: -224vw !important;
+  }
 }

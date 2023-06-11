@@ -77,8 +77,7 @@ footer{
     text-transform: none;
     position: relative;
     bottom: 8vw;
-    left: 50%;
-    transform: translateX(-50%);
+    text-align: center;
     z-index: 1;
 }
 .partenaires {
