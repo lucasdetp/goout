@@ -87,7 +87,6 @@
         <ul>
             <li><a href="/a-propos">A propos</a></li>
             <li><a href="/contact">Contact</a></li>
-            <li><a href="/chat">Chat</a></li>
             <li><a href="/bon-plan">Bon plan</a></li>
             <li><a href="/soirees">Les soirées</a></li>
             <li><a href="/">Accueil</a></li>

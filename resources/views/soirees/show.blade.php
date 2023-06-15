@@ -52,7 +52,15 @@
                 <button type="submit">Supprimer</button>
             </form>
             @endif
+            @if(session('success'))
 
+            <div class="alert">
+                <img src="{{ URL::asset('images/check.png') }}" alt="check">
+                <h1> {{ session('success') }} </h1>
+
+            </div>
+
+            @endif
 
 
         </div>

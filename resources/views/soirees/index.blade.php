@@ -65,7 +65,12 @@
             @foreach ($soireesByTheme as $soiree)
             <div class="soiree slide">
                 <div class="avatar left-image">
+                    @if (strpos(request()->path(), 'search') !== false)
+                    <img src="../{{ $soiree->user->profile_photo_path }}" alt="">
+
+                    @else
                     <img src="{{ $soiree->user->profile_photo_path }}" alt="">
+                    @endif
                 </div>
                 <div class="right-content">
                     <h2>{{ $soiree->titre }}</h2>
@@ -75,8 +80,8 @@
                     <p id="desc-soirees">{{ $soiree->description }}</p>
                     @endif
                     <p>Nombres de participants: {{ $soiree->participant }}</p>
-                    <p>Thème: {{ $soiree->theme->titre }}</p>
-                    <a class="button-slide" href="{{ route('soirees.show', $soiree->id) }}">Rejoindre</a>
+                    <!-- <p>Thème: {{ $soiree->theme->titre }}</p> -->
+                    <a class="button-slide" href="{{ route('soirees.show', $soiree->id) }}">Voir</a>
                     <ul>
                         @if ($soiree->participations && $soiree->participations->count() > 0)
                         <ul class="horizontal-list">
@@ -86,7 +91,11 @@
                             $displayCount = min($participantCount, $maxAvatars);
                             @endphp
                             @foreach ($soiree->participations->take($displayCount) as $participation)
+                            @if (strpos(request()->path(), 'search') !== false)
+                            <li><img class="avatar-test" src="../{{ $participation->user->profile_photo_path }}" alt=""></li>
+                            @else
                             <li><img class="avatar-test" src="{{ $participation->user->profile_photo_path }}" alt=""></li>
+                            @endif
                             @endforeach
                             @if ($participantCount > $maxAvatars)
                             <li><span class="avatar-test">...</span></li>
@@ -109,7 +118,15 @@
         </div>
     </div>
     @endforeach
+    @if(session('success'))
 
+    <div class="alert">
+        <img src="{{ URL::asset('images/cross.png') }}" alt="check">
+        <h1> {{ session('success') }} </h1>
+
+    </div>
+
+    @endif
 
     <script src="/javascript/carrousel-soirees.js"></script>
 </x-app-layout>

@@ -1,6 +1,7 @@
 body{
     padding: 0;
     margin: 0;
+    overflow: hidden;
   }
 /* page login */
 .container-login {
@@ -22,10 +23,8 @@ body{
   .login-page {
     width: 360px;
     margin: auto;
-    position: absolute;
-    left: 40vw;
-    top: -5%;
-   
+    position: relative;
+    top: -50vw;
     justify-content: center;
     display: flex;
   }
@@ -143,14 +142,19 @@ body{
   font-size: 1.2rem;
 }
 @media (max-width: 1440px){
-  .login-form a img {
-    width: 80%;
-  }
+  .login-page {
+    top: -60vw;
+}
+}
+@media (max-width: 1024px){
+  .login-page {
+    top: -84vw;
+}
 }
 @media  (max-width: 768px) {
   .login-page {
-    /* top: -115vw; */
-    left: 28vw;
+    top: -115vw;
+    /* left: 28vw; */
 }
   .back-login{
     left: -27%;
@@ -160,18 +164,21 @@ body{
 }
 @media  (max-width: 425px) {
   .login-page{
-    left: 15vw;
+
+    top: -203vw;
+    width: 20vw;
   }
   .login-form{
-    width: 75%;
+    width: auto;
   }
   .login-form a img {
     width: 50vw !important;
   }
 }
-@media  (max-width: 425px) {
+@media  (max-width: 375px) {
   .login-page{
-    left: 15vw;
-    width: auto;
+
+    top: -230vw;
   }
 }
+

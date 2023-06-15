@@ -18,7 +18,7 @@
             <p>Qui sait, tu pourrais trouver la réponse à ta question en un clin d'oeil, sans attendre notre réponse. On te fait confiance pour être un détective de l'information !</p>
             <p>Cependant, si tu ne trouves pas la réponses que tu cherches dans la FAQ, ne t'inquiète pas ! On est là pour toi. Utilise le formulaire de contact ci-joint pour nous envoyer un message, et notre équipe se fera un plaisir de te fournir une assistance personnalisée aussi vite que possible. Tu fais partie de notre famille, et ta satisfaction est notre priorité absolue.</p>
         </div>
-        <a href="#">Foire aux questions</a>
+        <a href="#faq-1">Foire aux questions</a>
     </div>
     <div class="all-card">
         <div class="card" id="faq-1" onclick="toggleDescription('faq-1')">

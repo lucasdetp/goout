@@ -26,7 +26,7 @@ class ParticipationController extends Controller
             'soiree_id' => $request->input('soiree_id'),
         ]);
 
-        return redirect()->back()->with('success', 'Participation créée avec succès.');
+        return redirect()->back()->with('success', 'Merci pour votre participation !');
     }
 
     /**
@@ -45,6 +45,6 @@ class ParticipationController extends Controller
         // Suppression de la participation
         $participation->delete();
 
-        return redirect()->back()->with('success', 'Participation supprimée avec succès.');
+        return redirect()->back()->with('success', 'Vous ne participez plus à la soirée !');
     }
 }

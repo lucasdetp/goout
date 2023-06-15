@@ -11,7 +11,7 @@ $(window).on('load', function() {
     centerPadding: '20px',
     infinite: true,
     autoplaySpeed: 5000,
-    autoplay: false,
+    autoplay: true,
     responsive: [
       {
         breakpoint: 769, /* ecran 768px*/ 
@@ -83,3 +83,10 @@ $(document).ready(function() {
     }
   }
 });
+// Sélectionnez l'élément d'alerte
+const alertElement = document.querySelector('.alert');
+
+// Ajoutez la classe `.hidden` après 3 secondes
+setTimeout(function() {
+  alertElement.classList.add('hidden');
+}, 1500);

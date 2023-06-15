@@ -11,7 +11,7 @@ $(window).on('load', function() {
         centerPadding: '20px',
         infinite: true,
         autoplaySpeed: 5000,
-        autoplay: false,
+        autoplay: true,
         responsive: [
           {
             breakpoint: 769,

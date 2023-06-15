@@ -6,7 +6,9 @@ main {
     position: relative;
     top: -25vw;
 }
-
+.bg-gray-100{
+  background-color: transparent !important;
+}
 .articles{
 display :flex;
 flex-direction: column;
@@ -501,7 +503,9 @@ float: left;
 margin-right: 20px; 
 margin-bottom: 80px;
 }
-
+.slick-slide.slick-current.slick-center{
+  font-size: 1.5rem;
+}
 .right-content {
     overflow: hidden; 
     padding: 10px;
@@ -880,6 +884,18 @@ margin-bottom: 80px;
     }
   }
   @media  (max-width: 768px) {
+    .right-content p {
+      font-size: 1.3rem;
+  }
+  .slide h2 {
+    font-size: 1.7rem;
+  }
+  .slide .right-content .button-slide {
+    font-size: 1.5rem;
+  }
+  .avatar {
+    width: 15vw;
+}
     .css-input,
     .button{
       height: 8vw;
@@ -994,6 +1010,12 @@ margin-bottom: 80px;
  
 }
 @media  (max-width: 425px) {
+  h1{
+    font-size: 2rem;
+  }
+  .center-slider .slick-current.slick-active{
+    font-size: 1rem;
+  }
  .css-input{
   height: 15vw;
   width: 53vw;

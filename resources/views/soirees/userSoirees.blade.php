@@ -57,6 +57,7 @@
     <h1>Mes participations</h1>
     <div class="wrapper">
         <div class="center-slider">
+            @if ($soireesParticipees->count() > 0)
             @foreach ($soireesParticipees as $participation)
             <div class="slide">
                 <div class="avatar left-image">
@@ -78,16 +79,12 @@
                         @if ($soiree->participations && $soiree->participations->count() > 0)
                         <ul class="horizontal-list">
                             @foreach ($participation->soiree->participations as $participationn)
-                            <!-- <li>{{ $participation->user->name }}</li> -->
                             <li><img class="avatar-test" src="{{$participation->user->profile_photo_path}}" alt=""></li>
-
-
                             @endforeach
                         </ul>
                         @else
                         <p>Aucun participant pour le moment.</p>
                         @endif
-
                     </ul>
                     <div class="date">
                         <p>Le {{ $soiree->date }} à {{ $soiree->ville }}</p>
@@ -95,6 +92,9 @@
                 </div>
             </div>
             @endforeach
+            @else
+            <p>Je ne participe pas encore à une soirée.</p>
+            @endif
         </div>
     </div>
 

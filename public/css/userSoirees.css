@@ -10,3 +10,12 @@ main{
    .bg-gray-100{
        background-color: transparent;
    }
+   @media  (max-width: 768px) {
+    #navbar-mobile{
+        top: 0 !important;
+    }
+    nav {
+        background-color: #2E294E;
+    }
+    
+}

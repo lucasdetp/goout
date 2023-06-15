@@ -10,3 +10,10 @@ main{
 .bg-gray-100{
     background-color: transparent;
 }
+nav{
+    background-color: #2E294E !important;
+    top: 0 !important;
+}
+#navbar-mobile{
+    top: 0 !important;
+}

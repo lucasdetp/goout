@@ -1,3 +1,6 @@
+body {
+    overflow: auto !important;
+}
 #txtarea #description {
     font-family: "ff-cocon-pro", sans-serif;
     outline: 0;
@@ -31,6 +34,7 @@
 }
 main {
     top: -40vw;
+    height: 0;
 }
 .container-login{
     height: 76vw !important;
@@ -40,4 +44,50 @@ main {
 }
 footer{
     max-height: 8vw;
+}
+.container-nav{
+    height: 180vh !important;
+}
+.login-page {
+    top: -40vw;
+}
+
+@media  (max-width: 1440px) {
+    .login-page{
+        top: -58vw !important;
+    }
+}
+@media  (max-width: 1024px) {
+    .login-page{
+        top: -100vw !important;
+    }
+}
+@media  (max-width: 768px) {
+    #navbar-mobile{
+        top: -197vw !important;
+    }
+    .login-page{
+        top: -155vw !important;
+        left: 0 !important;
+    }
+    .login-form {
+        width: 50vw;
+        margin: auto;
+    }
+}
+@media  (max-width: 425px) {
+    #navbar-mobile{
+        top: -347vw !important;
+    }
+    .login-page{
+        top: -210vw !important;
+    }
+}
+@media  (max-width: 375px) {
+    #navbar-mobile{
+        top: -402vw !important;
+    }
+    .login-page{
+        top: -260vw !important;
+    }
 }

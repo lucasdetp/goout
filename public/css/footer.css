@@ -78,7 +78,8 @@ footer{
     position: relative;
     bottom: 8vw;
     text-align: center;
-    z-index: 1;
+    margin: auto;
+    /* z-index: 1; todo */
 }
 .partenaires {
     position: relative;

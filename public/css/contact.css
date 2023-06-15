@@ -113,7 +113,7 @@ a[href="#faq"] {
   background: linear-gradient(90deg, #D90368, #2E294E);
   padding: 50px;
   border-radius: 28px;
-  margin-top: 10vw;
+  /* margin-top: 10vw; */
 }
 .container h1{
   color: #EADEDA;
@@ -204,6 +204,14 @@ form {
 #status-message {
   text-align: center;
   margin-top: 10px;
+  color: rgb(47, 143, 47);
+  font-family: "brevia", sans-serif;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+.all-card {
+  position: relative;
+  top: -10vw;
 }
 @media  (max-width: 1024px) {
  main {

@@ -19,11 +19,11 @@
 
 
     </head>
-    <div class="container-login">
+    <!-- <div class="container-login">
         <div class="back-login">
             <img src="{{ URL::asset('images/nav-back.png') }}" alt="img back">
         </div>
-    </div>
+    </div> -->
 
     <div class="login-page">
         <div class="form">
