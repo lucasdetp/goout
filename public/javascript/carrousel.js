@@ -67,7 +67,7 @@ $(document).ready(function() {
         centerMode: true,
         centerPadding: '20px',
         autoplaySpeed: 5000,
-        autoplay: false
+        autoplay: true
       });
   }
   
